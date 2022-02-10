@@ -45,17 +45,14 @@ for i in final:
     i.reverse()
     score = 0
     for j in i:
+        score = score*5
         if j == "(":
-            score = score*5
             score += 1
         elif j == "[":
-            score = score*5
             score += 2
         elif j == "{":
-            score = score*5
             score += 3
         else:
-            score = score*5
             score += 4
     result.append(score)
 print(statistics.median(result))
